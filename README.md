@@ -51,7 +51,7 @@ fis.match('js/*.js', {
 
 `eslintConf` 是对 eslint 的配置，参见 [Configuring ESLint](http://eslint.org/docs/user-guide/configuring) 。其属性类型参见 [CLIEngine](http://eslint.org/docs/developer-guide/nodejs-api#cliengine)。
 
-`eslintConf.ignoreFiles`： 一个数组，配置应该忽略掉的文件，数组成员为文件的匹配模式。
+`eslintConf.ignoreFiles`： 一个数组，配置应该忽略掉的文件。数组成员为目标文件的匹配规则，遵循 [glob](https://en.wikipedia.org/wiki/Glob_(programming)) 语法。
 
 
 ### 默认配置
