@@ -107,8 +107,12 @@ function formatter(results) {
     msg += count.bold.yellow;
     return msg;
 }
-
+var _files = [];
 module.exports = function(content, file, conf) {
+  if(_files.indexOf(file.id) > -1){ //避免重复校验
+    return;
+  }
+  _files.push(file.id);
   var assign = require('mixin-deep');
   var defConf = require('./package.json').defconf;
   var globals = defConf.globals;
