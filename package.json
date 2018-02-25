@@ -1,5 +1,5 @@
 {
-  "name": "fis3-lint-eslint-umu",
+  "name": "fis3-lint-eslintumu",
   "version": "1.0.0",
   "description": "A javascript linter plugin for fis3 based on eslint",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/librajt/fis3-lint-eslint-umu.git"
+    "url": "git+https://github.com/librajt/fis3-lint-eslintumu.git"
   },
   "keywords": [
     "fis3-lint-eslint",
@@ -20,9 +20,9 @@
   "author": "librajt",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/librajt/fis3-lint-eslint-umu/issues"
+    "url": "https://github.com/librajt/fis3-lint-eslintumu/issues"
   },
-  "homepage": "https://github.com/librajt/fis3-lint-eslint-umu#readme",
+  "homepage": "https://github.com/librajt/fis3-lint-eslintumu#readme",
   "dependencies": {
     "eslint": "^2.2.0",
     "mixin-deep": "^1.1.3"
