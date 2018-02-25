@@ -134,15 +134,22 @@ module.exports = function(content, file, conf) {
   	return;
   }
 
+  content = content.replace(/<%=(.*?)%>/ig, '$1');
+  content = content.replace(/<%\-(.*?)%>/ig, '$1');
+
   var CLIEngine = require("eslint").CLIEngine;
   var cli = new CLIEngine(lastConf);
   var report = cli.executeOnText(content);
 
   if (report.errorCount || report.warningCount) {
   	var msg = formatter(report.results);
-  	fis.log.info('%s  %s \n%s', file.id, 'fail!'.red, msg);
+    var action = 'info';
+    if (conf.buildEnv == 'onLine') {
+      action = 'error';
+    }
+    fis.log[action]('%s  %s \n%s', file.id, 'fail!'.red, msg);
   	return;
   }
 
-  fis.log.info(file.id, ' pass!'.green);
+  // fis.log.info(file.id, ' pass!'.green);
 };
